@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fce6a8;
+  height: 100vh;
+  padding: 10px;
+  display: grid;
+  gap: 5px;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas: "cabecalho" "principal";
+}
+body > *:not(script) {
+  display: flex;
+  justify-content: center;
+}
+
+.cabecalho {
+  grid-area: cabecalho;
+  background-color: #8fbcb3;
+  padding: 10px;
+}
+
+.principal {
+  grid-area: principal;
+  background-color: #c3cfd9;
+  padding: 10px 20%; /* SEGREDO PARA DIMINUIR AS MARGENS DA DIV.....*/
+  flex-direction: column;
+  gap: 3px;
+}
+
+.card-exercicio {
+  background-color: #dfe6ed;
+  flex-grow: 1;
+  display: flex;
+  gap: 2px;
+  padding: 10px;
+}
+.card-exercicio > * {
+  flex-grow: 1;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.card-exercicio > * > input {
+  padding: 10px;
+  border-radius: 2px;
+  border: solid #c3cfd9 2px;
+  outline: none;
+}
+.card-exercicio > * > button {
+  padding: 10px;
+  color: white;
+  background-color: #788895;
+  border: none;
+  border-radius: 2px;
+}
+.card-exercicio__entrada {
+  justify-content: space-evenly;
+}
+.card-exercicio__saida {
+  background-color: #788895;
+  display: flex;
+}/*# sourceMappingURL=style.css.map */

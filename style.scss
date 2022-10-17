@@ -1,0 +1,85 @@
+@import 'reset';
+@import 'cores';
+
+body {
+    background-color: $cor-body;
+    height: 100vh;
+    padding: 10px;
+
+    display: grid;
+    gap:5px;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas:
+    "cabecalho"
+    "principal";
+
+    body > *:not(script) {          //   MACETE QUE ME QUEBREI , POIS ACABAVA APARECENDO SCRIPT QUE O LIVESERVER INSERIA. 
+        display: flex;
+        justify-content: center;
+      }
+}
+
+.cabecalho {
+    grid-area: cabecalho;
+    background-color: $cor-fundoprincipal;
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.principal {
+    grid-area: principal;
+    background-color: $cinza-medio;  
+    justify-content: center;
+    display: flex;
+    padding: 10px 20%;          /* SEGREDO PARA DIMINUIR AS MARGENS DA DIV.....*/ 
+    flex-direction: column;
+    gap: 3px;  
+
+}   
+
+.card-exercicio {
+
+    background-color: $cinza-claro;
+    flex-grow: 1;
+    display: flex;
+    gap: 2px;
+    padding: 10px;
+
+    > * {
+        flex-grow: 1;
+        width: 100%;    
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-evenly;
+        
+        
+        > input {
+            padding: 10px;
+            border-radius: 2px;
+            border: solid $cinza-medio 2px;
+            outline: none;
+        }
+
+        > button {
+            padding: 10px;
+            color: white;
+            background-color: $cinza-escuro;
+            border: none;
+            border-radius: 2px;
+        }
+    } 
+
+
+    &__entrada {
+        justify-content: space-evenly;
+    }
+
+    &__saida {
+        background-color: $cinza-escuro;
+        display: flex;
+    }
+}
+
